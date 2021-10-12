@@ -1,0 +1,53 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentBook" class="edit-form">
+      <h4>Book</h4>
+      <form>
+        <div class="form-group">
+          <label for="bookName">BookName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bookName"
+            [(ngModel)]="currentBook.bookName"
+            name="bookName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            [(ngModel)]="currentBook.price"
+            name="price"
+          />
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              id="category"
+              [(ngModel)]="currentBook.category"
+              name="category"
+            />
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input
+              type="text"
+              class="form-control"
+              id="author"
+              [(ngModel)]="currentBook.author"
+              name="author"
+            />
+          </div>
+  
+      </form>
+  
+      <button type="button" class="btn btn-danger" (click)="updateBook()" >Update</button>
+      <button type="button" class="btn btn-warning" (click)="deleteBook()">Delete</button>
+
+    </div>
+  
+  </div>
